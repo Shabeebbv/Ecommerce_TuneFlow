@@ -33,7 +33,7 @@
   transition: color 0.3s;
 }
 .navbar-center a:hover {
-  color: #32c98d;
+  color: #1976D2;
 }
 
 /* Search bar */
@@ -70,7 +70,7 @@
   transition: color 0.3s;
 }
 .navbar-right .icon:hover {
-  color: #32c98d;
+  color: #1976D2;
 }
 
 /* Responsive */
