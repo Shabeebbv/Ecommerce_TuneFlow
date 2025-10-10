@@ -74,8 +74,7 @@ const CartPage = () => {
         <div className="flex flex-col items-center mt-4 sm:mt-0">
           <button
             onClick={() => removeFromCart(item.productId)}
-            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 mb-2"
-          >
+            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 mb-2">
             Remove
           </button>
         </div>

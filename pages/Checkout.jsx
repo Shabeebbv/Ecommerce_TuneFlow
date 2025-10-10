@@ -3,8 +3,20 @@ import toast from "react-hot-toast";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../components/Cartcontext';
+import axios from 'axios';
 
 export const Checkout = () => {
+  const[user,setUser]=useState(null)
+  const[orders,setOrders]=useState([])
+
+  
+
+  const userData=async()=>{
+    const res=await axios.get(`http://localhost:3000/users/${user.id}`)
+    
+  }
+
+  
     
   const[formData,setFormData]=useState({name: "",email: "",phonenumber: "",address: "",city:"",pincode:"",landmark:""})
   const validation=()=>{
@@ -144,8 +156,8 @@ const handlePlaceOrder = () => {
             </div>
           </div>
 
-          <button onClick={handlePlaceOrder} className="bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-purple-700 transition duration-300 mt-4">
-            Place Order
+          <button onClick={handlePlaceOrder}  className="bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-purple-700 transition duration-300 mt-4">
+            Place Order 
           </button>
         </div>
       </div>

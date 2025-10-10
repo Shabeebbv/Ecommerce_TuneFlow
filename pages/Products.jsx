@@ -9,11 +9,12 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 
 export const Products = () => {
+  // const {Wishlist}= useContext(Whis)
   const[products,setProducts] =useState([])
   const {search}=useContext(SearchContext)
   const navigate =useNavigate()
   const { addToCart ,cartItems} = useContext(CartContext);
-  const {togglewishlist}=useContext(wishlistContext)
+  const {togglewishlist,wishlist}=useContext(wishlistContext)
 
   useEffect(()=>{
     axios.get("http://localhost:3000/products")
@@ -48,11 +49,14 @@ export const Products = () => {
           className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
 
 
-            {/* wishlist */}
-             <button onClick={()=>togglewishlist(item)}><FaRegHeart/></button>
+            {/* wishlist */}{wishlist.some((items)=>items.id===item.id)?(
+             <button onClick={()=>togglewishlist(item)}>
+              <FaHeart color="red" className='text-xl transition-transform duration-200 ease-in-out hover:scale-110' /></button>):(<button onClick={()=>togglewishlist(item)}>
+              <FaRegHeart       className="text-xl text-black-500 transition-transform duration-200 ease-in-out hover:scale-110" /></button>)}
+             
             </div>
 
-          <img src={item.image} alt="headphone" className="w-full h-40 object-contain mb-3 rounded hover:scale-105 transition-transform duration-300"/>
+          <img src={item.image} alt="headphone" className="w-full h-40 object-contain mb-3 rounded hover:scale-100 transition-transform duration-300"/>
           <div><h3 className="text-lg font-semibold">{item.name}</h3>
           <div 
           className="flex items-center justify-center space-x-2 mt-2">
