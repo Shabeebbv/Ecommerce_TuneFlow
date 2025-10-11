@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
-import { FaHeart, FaShoppingCart, FaUser, FaSearch } from "react-icons/fa";
+import { FaHeart, FaShoppingCart,  FaUser, FaSearch } from "react-icons/fa";
 import { useContext } from "react";
 import {SearchContext} from './Search'
 import { CartContext } from "./Cartcontext";
 import { wishlistContext } from "./Wishlistcontext";
+
 
 export const Navbar = () => {
   const {cartItems}=useContext(CartContext)
@@ -33,7 +34,7 @@ export const Navbar = () => {
       <div className="navbar-center">
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
-        <Link to="/about">About</Link>
+        <Link to="/contactUs">Contact Us</Link>
       </div>
 
       <div className="navbar-search flex-1 max-w-md mx-4">
@@ -65,7 +66,7 @@ export const Navbar = () => {
             </span>)}
   </div>
   <div>
-    <button onClick={()=>navigate('/orders')}>orders</button>
+    <button onClick={()=>navigate('/orders')}>Orders</button>
     
   </div>
     
