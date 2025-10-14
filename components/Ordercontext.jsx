@@ -40,7 +40,7 @@ export const OrderProvider = ({children}) => {
                 return
             }
 
-            const updatedOrder=[...orders,...newOrder]
+            const updatedOrder=[...orders,...newOrder.map(o=>({...o,orderstatus:"pending"}))]
             setOrders(updatedOrder)
             await axios.patch(`http://localhost:3000/users/${user.id}`,{
                 orders:updatedOrder

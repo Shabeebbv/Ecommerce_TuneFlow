@@ -49,22 +49,18 @@ export const Hero = () => {
 
           {/* Slide 2 */}
           <SwiperSlide>
-            <div className="banner-slide">
-              <img src="banner9.jpg" alt="Shoes Sale" />
+            <div className="relative banner-slide">
+              <img src="banner9.jpg" alt="Shoes Sale" className= "w-full h-full object-fill" />
               <div className="banner-content">
                 <h2>SALE UP TO 50% OFF</h2>
                 <p>Limited-time headphone collection sale grab yours now!</p>
-                <button className="btn">Shop Now</button>
+                <button className="btn"  onClick={()=>{navigate('/item/003')}}>Shop Now</button>
               </div>
             </div>
           </SwiperSlide>
         </Swiper>
       </section>
-      {/* <div className="trust-strip">
-  <span>🚚 Free Shipping</span>
-  <span>🔄 Easy Returns</span>
-  <span>⭐ 4.9/5 Rated by 10K+ Customers</span>
-</div> */}
+
 
 
       {/* Popular Categories */}

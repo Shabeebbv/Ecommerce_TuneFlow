@@ -33,7 +33,7 @@ export const Footer = () => {
 
       <div className="md:col-span-1 col-span-3 space-y-2">
         <h2 className="text-lg font-semibold mb-2">Contact Us</h2>
-        <p className="text-gray-400 text-sm">Email: support@example.com</p>
+        <p className="text-gray-400 text-sm">Email: tuneflow@example.com</p>
         <p className="text-gray-400 text-sm">Phone: +91 123-456-7890</p>
         <div className="flex gap-3 mt-2">
           <a href="#" className="hover:text-blue-500 transition-colors">Facebook</a>

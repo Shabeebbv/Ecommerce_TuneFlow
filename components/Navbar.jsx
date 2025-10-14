@@ -18,7 +18,7 @@ export const Navbar = () => {
    const handleSearch = (e) => {
     e.preventDefault();
     if (!search.trim()) return
-    navigate("/products");   
+    // navigate("/products");   
    
   };
 
